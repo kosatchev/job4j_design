@@ -1,42 +1,38 @@
 package ru.job4j.it;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.util.stream.Stream;
 
 public class MatrixIt implements Iterator<Integer> {
 
 	private final int[][] data;
 	private int row = 0;
 	private int col = 0;
-	private int pos = 0;
-	private int size = 0;
 
 	public MatrixIt(int[][] data) {
 		this.data = data;
-		for (var row : data) {
-			size += row.length;
-		}
-
 	}
 
 	@Override
 	public boolean hasNext() {
-		return pos < size;
+		while (row < data.length) {
+			if (data[row].length == 0 || col == data[row].length) {
+				row++;
+				col = 0;
+			} else if (col < data[row].length) {
+				break;
+			}
+		}
+		return row < data.length && col < data[row].length;
 	}
 
 	@Override
 	public Integer next() {
+		int result = 0;
 		if (!hasNext()) {
 			throw new NoSuchElementException();
 		}
-		col++;
-		pos++;
-		while (row < data.length && col >= data[row].length) {
-			col = 0;
-			row++;
-		}
-		return data[row][col];
+		result = data[row][col++];
+		return result;
 	}
 }
