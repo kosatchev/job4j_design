@@ -23,7 +23,7 @@ public class SimpleArray<T> implements Iterable {
 	}
 
 	public void set(int index, T value) {
-		Objects.checkIndex(position, array.length);
+		Objects.checkIndex(index, this.position);
 		this.array[index] = value;
 	}
 
