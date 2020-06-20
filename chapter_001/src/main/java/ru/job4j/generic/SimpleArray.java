@@ -34,7 +34,7 @@ public class SimpleArray<T> implements Iterable {
 	}
 
 	public T get(int index) {
-		Objects.checkIndex(position, array.length);
+		Objects.checkIndex(index, this.position);
 		return (T) this.array[index];
 	}
 
