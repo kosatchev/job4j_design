@@ -23,16 +23,18 @@ public class SimpleArray<T> implements Iterable {
 	}
 
 	public void set(int index, T value) {
+		Objects.checkIndex(position, array.length);
 		this.array[index] = value;
 	}
 
 	public void remove(int index) {
-		if (this.position - 1 - index >= 0) {
+		if (this.position - 1 >= index) {
 			System.arraycopy(array, index + 1, array, index, array.length - 1 - index);
 		}
 	}
 
 	public T get(int index) {
+		Objects.checkIndex(position, array.length);
 		return (T) this.array[index];
 	}
 
