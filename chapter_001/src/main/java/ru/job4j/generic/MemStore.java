@@ -27,10 +27,8 @@ public final class MemStore<T extends Base> implements Store<T> {
 		int index = this.indexOf(id);
 		boolean rsl = false;
 		if (index != -1) {
-			T temp = this.mem.set(index, model);
-			if (model.equals(temp)) {
-				rsl = true;
-			}
+			this.mem.set(index, model);
+			rsl = true;
 		}
 		return rsl;
 	}
