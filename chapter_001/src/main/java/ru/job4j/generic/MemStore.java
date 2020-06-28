@@ -12,6 +12,7 @@ public final class MemStore<T extends Base> implements Store<T> {
 		for (int i = 0; i < this.mem.size(); i ++) {
 			if (this.mem.get(i).getId().equals(id)) {
 				rsl = i;
+				break;
 			}
 		}
 		return rsl;
@@ -46,12 +47,6 @@ public final class MemStore<T extends Base> implements Store<T> {
 
 	@Override
 	public T findById(String id) {
-		T rsl = null;
-		for (T item : this.mem) {
-			if (item.getId().equals(id)) {
-				rsl = item;
-			}
-		}
-		return rsl;
+		return this.findById(id);
 	}
 }
