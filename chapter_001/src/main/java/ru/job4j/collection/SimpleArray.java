@@ -29,13 +29,17 @@ public class SimpleArray<T> implements Iterable<T> {
 
 	public void add(T model) {
 		if (this.position == this.size) {
-			this.size = array.length + (this.array.length / 2) + 1;
-			this.array = Arrays.copyOf(this.array, this.size);
+			extendArray();
 		}
 		this.array[position++] = model;
 		this.modCount++;
 	}
 
+	private void extendArray() {
+		this.size = array.length + (this.array.length / 2) + 1;
+		this.array = Arrays.copyOf(this.array, this.size);
+	}
+	
     @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {
