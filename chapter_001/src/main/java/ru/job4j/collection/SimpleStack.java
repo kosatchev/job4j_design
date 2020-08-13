@@ -18,11 +18,6 @@ public class SimpleStack<T> {
 		this.size++;
 	}
 
-	public void poll() {
-		linked.deleteLast();
-		this.size--;
-	}
-
 	public int size() {
 		return this.size;
 	}
