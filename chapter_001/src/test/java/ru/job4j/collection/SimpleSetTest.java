@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class SimpleArrayTest {
+public class SimpleSetTest {
 
 	@Test
 	public void whenAddThenGet() {

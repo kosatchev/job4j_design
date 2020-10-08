@@ -25,6 +25,7 @@ public class ReversableForwardLinkedTest {
 		Iterator<Integer> it = linked.iterator();
 		assertThat(it.next(), is(1));
 	}
+
 	@Test
 	public void whenAddThenIter2() {
 		ReversableForwardLinked<Integer> linked = new ReversableForwardLinked<>();
@@ -45,6 +46,7 @@ public class ReversableForwardLinkedTest {
 		assertThat(it.next(), is(2));
 		assertThat(it.next(), is(1));
 	}
+
 	@Test
 	public void whenAddThenIter3() {
 		ReversableForwardLinked<Integer> linked = new ReversableForwardLinked<>();
@@ -69,6 +71,7 @@ public class ReversableForwardLinkedTest {
 		assertThat(it.next(), is(2));
 		assertThat(it.next(), is(1));
 	}
+
 	@Test
 	public void whenAddThenIter5() {
 		ReversableForwardLinked<Integer> linked = new ReversableForwardLinked<>();

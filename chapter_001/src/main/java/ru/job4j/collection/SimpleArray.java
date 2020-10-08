@@ -39,33 +39,33 @@ public class SimpleArray<T> implements Iterable<T> {
 		this.size = array.length + (this.array.length / 2) + 1;
 		this.array = Arrays.copyOf(this.array, this.size);
 	}
-	
-    @Override
-    public Iterator<T> iterator() {
-        return new Iterator<T>() {
-            private final int expectedModCount = modCount;
-            private int index = 0;
 
-            @Override
-            public boolean hasNext() {
-                checkModCount();
-                return this.index < position;
-            }
+	@Override
+	public Iterator<T> iterator() {
+		return new Iterator<T>() {
+			private final int expectedModCount = modCount;
+			private int index = 0;
 
-            @Override
-            public T next() {
-                checkModCount();
-                if (!hasNext()) {
-                    throw new NoSuchElementException();
-                }
-                return (T) array[index++];
-            }
+			@Override
+			public boolean hasNext() {
+				checkModCount();
+				return this.index < position;
+			}
 
-            private void checkModCount() {
-                if (expectedModCount != modCount) {
-                    throw new ConcurrentModificationException();
-                }
-            }
-        };
-    }
+			@Override
+			public T next() {
+				checkModCount();
+				if (!hasNext()) {
+					throw new NoSuchElementException();
+				}
+				return (T) array[index++];
+			}
+
+			private void checkModCount() {
+				if (expectedModCount != modCount) {
+					throw new ConcurrentModificationException();
+				}
+			}
+		};
+	}
 }

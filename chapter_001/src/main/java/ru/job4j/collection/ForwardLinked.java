@@ -10,7 +10,7 @@ public class ForwardLinked<T> implements Iterable<T> {
 	public void addFirst(T value) {
 		head = new Node<T>(value, this.head);
 	}
-	
+
 	public void add(T value) {
 		Node<T> node = new Node<T>(value, null);
 		if (head == null) {
@@ -79,7 +79,7 @@ public class ForwardLinked<T> implements Iterable<T> {
 			this.value = value;
 			this.next = next;
 		}
-		
+
 		public T getValue() {
 			return value;
 		}
