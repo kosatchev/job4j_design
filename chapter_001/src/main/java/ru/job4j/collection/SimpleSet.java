@@ -1,6 +1,7 @@
 package ru.job4j.collection;
 
 import java.util.Iterator;
+import java.util.Objects;
 
 public class SimpleSet<E> {
 
@@ -15,7 +16,7 @@ public class SimpleSet<E> {
 	public boolean contains(E element) {
 		boolean result = false;
 		for (E e : innerArray) {
-			if (element.equals(e)) {
+			if (Objects.equals(element, e)) {
 				result = true;
 				break;
 			}
