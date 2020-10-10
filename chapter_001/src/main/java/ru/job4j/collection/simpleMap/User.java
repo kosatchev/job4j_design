@@ -14,9 +14,9 @@ import java.util.Objects;
  */
 public class User {
 
-	String name;
-	int children;
-	Calendar birthday;
+	private String name;
+	private int children;
+	private Calendar birthday;
 
 	public String getName() {
 		return name;
