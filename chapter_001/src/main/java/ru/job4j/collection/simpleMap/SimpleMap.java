@@ -15,11 +15,9 @@ public class SimpleMap {
 
 		User u1 = new User("n", 1, date);
 		User u2 = new User("n", 1, date);
-		User u3 = new User("n", 1, date);
 
-		map.put(u1, "object");
-		map.put(u2, "object");
-		map.put(u3, "object");
+		map.put(u1, "object1");
+		map.put(u2, "object2");
 
 		map.entrySet().forEach(e -> System.out.println(e.getKey().toString() + ":" + e.getValue()));
 	}
