@@ -18,6 +18,11 @@ public class User {
 	private int children;
 	private Calendar birthday;
 
+	public User(String name, int children, Calendar birthday) {
+		this.name = name;
+		this.children = children;
+		this.birthday = birthday;
+	}
 	public String getName() {
 		return name;
 	}
@@ -49,6 +54,11 @@ public class User {
 		hash = 79 * hash + this.children;
 		hash = 79 * hash + Objects.hashCode(this.birthday);
 		return hash;
+	}
+
+	@Override
+	public String toString() {
+		return "User{" + "name=" + name + ", children=" + children + ", birthday=" + birthday.getTime() + '}';
 	}
 
 	@Override
