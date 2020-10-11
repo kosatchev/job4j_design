@@ -47,14 +47,14 @@ public class User {
 		this.birthday = birthday;
 	}
 
-//	@Override
-//	public int hashCode() {
-//		int hash = 3;
-//		hash = 79 * hash + Objects.hashCode(this.name);
-//		hash = 79 * hash + this.children;
-//		hash = 79 * hash + Objects.hashCode(this.birthday);
-//		return hash;
-//	}
+	@Override
+	public int hashCode() {
+		int hash = 3;
+		hash = 79 * hash + Objects.hashCode(this.name);
+		hash = 79 * hash + this.children;
+		hash = 79 * hash + Objects.hashCode(this.birthday);
+		return hash;
+	}
 
 	@Override
 	public boolean equals(Object obj) {
