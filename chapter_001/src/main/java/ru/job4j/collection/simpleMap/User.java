@@ -47,41 +47,41 @@ public class User {
 		this.birthday = birthday;
 	}
 
+//	@Override
+//	public int hashCode() {
+//		int hash = 3;
+//		hash = 79 * hash + Objects.hashCode(this.name);
+//		hash = 79 * hash + this.children;
+//		hash = 79 * hash + Objects.hashCode(this.birthday);
+//		return hash;
+//	}
+
 	@Override
-	public int hashCode() {
-		int hash = 3;
-		hash = 79 * hash + Objects.hashCode(this.name);
-		hash = 79 * hash + this.children;
-		hash = 79 * hash + Objects.hashCode(this.birthday);
-		return hash;
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final User other = (User) obj;
+		if (this.children != other.children) {
+			return false;
+		}
+		if (!Objects.equals(this.name, other.name)) {
+			return false;
+		}
+		if (!Objects.equals(this.birthday, other.birthday)) {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public String toString() {
 		return "User{" + "name=" + name + ", children=" + children + ", birthday=" + birthday.getTime() + '}';
 	}
-
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj) {
-//			return true;
-//		}
-//		if (obj == null) {
-//			return false;
-//		}
-//		if (getClass() != obj.getClass()) {
-//			return false;
-//		}
-//		final User other = (User) obj;
-//		if (this.children != other.children) {
-//			return false;
-//		}
-//		if (!Objects.equals(this.name, other.name)) {
-//			return false;
-//		}
-//		if (!Objects.equals(this.birthday, other.birthday)) {
-//			return false;
-//		}
-//		return true;
-//	}
 }
