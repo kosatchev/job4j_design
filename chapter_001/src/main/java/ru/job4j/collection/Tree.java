@@ -20,7 +20,11 @@ class Tree<E> implements SimpleTree<E> {
 	}
 
 	private boolean addNode(Node<E> parentNode, E child) {
-		return parentNode.children.add(new Node<>(child));
+		if (findBy(parentNode.value).isPresent()) {
+			return parentNode.children.add(new Node<>(child));
+		} else {
+			return false;
+		}
 	}
 
 	public boolean isBinary() {
