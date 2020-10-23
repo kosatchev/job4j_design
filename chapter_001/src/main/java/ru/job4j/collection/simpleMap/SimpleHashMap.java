@@ -17,14 +17,16 @@ public class SimpleHashMap<K, V> implements Iterable<V> {
 
 	public boolean insert(K key, V val) {
 		boolean rsl = false;
-		Entry<K, V> e = new Entry(key, val);
-		if (count / capacity >= loadFactor) {
-			extend();
-		}
-		if (e != null && val != null) {
-			hashTable[calculateIndex(key, capacity)] = e;
+		Entry entry = hashTable[calculateIndex(key, capacity)];
+		Entry<K, V> newEntry = new Entry(key, val);
+		if (entry == null || entry.getKey() != key) { // если при добавлении ключ уже есть, то возвращать false.
+			hashTable[calculateIndex(key, capacity)] = newEntry;
 			modCount++;
 			count++;
+			rsl = true;
+			if (count / capacity >= loadFactor) { // При конкурентном доступе, думаю, лучше расширять массив после добавленя элемента
+				extend();
+			}
 		}
 		return rsl;
 	}
@@ -65,6 +67,7 @@ public class SimpleHashMap<K, V> implements Iterable<V> {
 		}
 		capacity = newSize;
 		hashTable = newHashTable;
+		modCount++; // Это важное изменение, которое влияет на итератор
 	}
 
 	private class Entry<K, V> {
