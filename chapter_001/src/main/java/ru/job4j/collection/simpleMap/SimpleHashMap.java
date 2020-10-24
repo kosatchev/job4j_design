@@ -19,7 +19,7 @@ public class SimpleHashMap<K, V> implements Iterable<V> {
 		boolean rsl = false;
 		Entry entry = hashTable[calculateIndex(key, capacity)];
 		Entry<K, V> newEntry = new Entry(key, val);
-		if (entry == null || entry.getKey() != key) { // если при добавлении ключ уже есть, то возвращать false.
+		if (entry == null || entry.getKey().equals(key)) { // если при добавлении ключ уже есть, то возвращать false.
 			hashTable[calculateIndex(key, capacity)] = newEntry;
 			modCount++;
 			count++;
