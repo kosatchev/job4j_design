@@ -19,12 +19,12 @@ public class SimpleHashMap<K, V> implements Iterable<V> {
 		boolean rsl = false;
 		Entry entry = hashTable[calculateIndex(key, capacity)];
 		Entry<K, V> newEntry = new Entry(key, val);
-		if (entry == null || entry.getKey().equals(key)) { // если при добавлении ключ уже есть, то возвращать false.
+		if (entry == null || !entry.getKey().equals(key)) { // если при добавлении ключ уже есть, то возвращать false.
 			hashTable[calculateIndex(key, capacity)] = newEntry;
 			modCount++;
 			count++;
 			rsl = true;
-			if (count / capacity >= loadFactor) { // При конкурентном доступе, думаю, лучше расширять массив после добавленя элемента
+			if ((float)count / capacity >= loadFactor) { // При конкурентном доступе, думаю, лучше расширять массив после добавленя элемента
 				extend();
 			}
 		}
@@ -49,6 +49,10 @@ public class SimpleHashMap<K, V> implements Iterable<V> {
 			rsl = true;
 		}
 		return rsl;
+	}
+	
+	public int capacity() {
+		return capacity;
 	}
 
 	private int calculateIndex(Object obj, int capacity) {
