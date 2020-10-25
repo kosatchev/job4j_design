@@ -4,50 +4,26 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Analyze {
 
-	public Info diff(List<User> previous, List<User> current) {
+    public static Info diff(List<User> previous, List<User> current) {
 		Info rsl = new Info(0, 0, 0);
-		Map<Integer, String> prevMap = listToMap(previous);
-		Map<Integer, String> currMap = listToMap(current);
-
-		Set<Integer> addedSet = difference(currMap.keySet(), prevMap.keySet());
-		Set<Integer> deletedSet = difference(prevMap.keySet(), currMap.keySet());
-		Set<Integer> intersection = intersect(prevMap.keySet(), currMap.keySet());
-
-		for (int id : intersection) {
-			if (!prevMap.get(id).equals(currMap.get(id))) {
-				rsl.changed += 1;
-			}
-		}
-
-		rsl.added = addedSet.size();
-		rsl.deleted = deletedSet.size();
-		return rsl;
-	}
-
-	public Set<Integer> difference(Set set1, Set set2) {
-		Set<Integer> rsl = new HashSet(set1);
-		rsl.removeAll(set2);
-		return rsl;
-	}
-
-	public Set<Integer> intersect(Set set1, Set set2) {
-		Set<Integer> rsl = new HashSet(set1);
-		rsl.retainAll(set2);
-		return rsl;
-	}
-
-	public Map<Integer, String> listToMap(List<User> usersList) {
-		Map<Integer, String> rsl = new HashMap<>();
-		for (User user : usersList) {
-			rsl.put(user.id, user.name);
-		}
-		return rsl;
-	}
+        Map<Integer, User> currMap = current.stream().collect(Collectors.toMap(user -> user.id, user -> user));
+        for (User prevUser : previous) {
+            if (!currMap.containsKey(prevUser.id)) {
+                rsl.deleted++;
+            }
+            User currUser = currMap.remove(prevUser.id);
+            if (currUser != null && !prevUser.name.equals(currUser.name)) {
+                rsl.changed++;
+            }
+        }
+		rsl.added = currMap.size();
+        return rsl;
+    }
 
 	public static class User {
 
