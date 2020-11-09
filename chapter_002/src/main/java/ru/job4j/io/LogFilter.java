@@ -1,7 +1,10 @@
 package ru.job4j.io;
 
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,12 +27,26 @@ public class LogFilter {
 		}
 	}
 
+	public static void write(List<String> file) {
+		try (PrintWriter out = new PrintWriter(
+				new BufferedOutputStream(
+						new FileOutputStream("log-out.txt")
+				))) {
+			for (String line : file) {
+				out.write(line + "\n");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	public static void main(String[] args) {
 		try (BufferedReader in = new BufferedReader(new FileReader("log-input.txt"))) {
 			List<String> lines = new ArrayList<String>();
 			in.lines().forEach(lines::add);
-
-			print(filter(lines));
+			List<String> out = filter(lines);
+			write(out);
+			print(out);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
