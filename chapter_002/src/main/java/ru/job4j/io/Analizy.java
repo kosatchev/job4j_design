@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Analizy {
 
-	public static void unavailable(String source, String target) {
+	public void unavailable(String source, String target) {
 		String start = null;
 		String end;
 		try (BufferedReader reader = new BufferedReader(new FileReader(source))) {
@@ -37,6 +37,7 @@ public class Analizy {
 	}
 	
 	public static void main(String[] args) {
-		unavailable("server.log.txt", "unavailable.csv");
+		Analizy an = new Analizy();
+		an.unavailable("server.log.txt", "unavailable.csv");
 	}
 }
