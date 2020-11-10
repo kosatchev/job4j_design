@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Search {
 	public static void main(String[] args) throws IOException {
-		Path path = Paths.get(".");
-		search(path, "java").forEach(System.out::println);
+		Path path = Paths.get(args[0]);
+		search(path, args[1]).forEach(System.out::println);
 	}
 
 	public static List<Path> search(Path root, String ext) throws IOException {

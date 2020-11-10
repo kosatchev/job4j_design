@@ -10,7 +10,7 @@ public class Dir {
 		if (System.getProperty("os.name").equals("Windows")) {
 			file = new File("c:\\projects");
 		} else {
-			file = new File("../");
+			file = new File("./");
 		}
 
 		if (!file.exists()) {
