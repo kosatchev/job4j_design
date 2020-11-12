@@ -9,10 +9,19 @@ public class Search {
 
 	public static void main(String[] args) {
 		try {
+
 			Path path = Paths.get(args[0]);
+			
+			if (!path.toFile().isDirectory()) {
+				throw new IllegalArgumentException(String.format("Not directory %s", path.toAbsolutePath().toString()));
+			}
+
 			search(path, args[1]).forEach(System.out::println);
+
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Ошибка. Необходимо запускать с 2 аргументами (путь к директории и искомое расширение)");
+		} catch (IllegalArgumentException e) {
+			System.out.println(e);
 		}
 	}
 
