@@ -8,10 +8,15 @@ import java.util.List;
 public class Search {
 
 	public static void main(String[] args) {
+
 		try {
 
+			if (args.length != 2) {
+				throw new ArrayIndexOutOfBoundsException("Ошибка. Необходимо запускать с 2 аргументами (путь к директории и искомое расширение)");
+			}
+
 			Path path = Paths.get(args[0]);
-			
+
 			if (!path.toFile().isDirectory()) {
 				throw new IllegalArgumentException(String.format("Not directory %s", path.toAbsolutePath().toString()));
 			}
@@ -19,7 +24,7 @@ public class Search {
 			search(path, args[1]).forEach(System.out::println);
 
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("Ошибка. Необходимо запускать с 2 аргументами (путь к директории и искомое расширение)");
+			System.out.println(e);
 		} catch (IllegalArgumentException e) {
 			System.out.println(e);
 		}
