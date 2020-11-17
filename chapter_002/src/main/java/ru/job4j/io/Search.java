@@ -9,8 +9,6 @@ public class Search {
 
 	public static void main(String[] args) {
 
-		try {
-
 			if (args.length != 2) {
 				throw new ArrayIndexOutOfBoundsException("Ошибка. Необходимо запускать с 2 аргументами (путь к директории и искомое расширение)");
 			}
@@ -23,11 +21,6 @@ public class Search {
 
 			search(path, args[1]).forEach(System.out::println);
 
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println(e);
-		} catch (IllegalArgumentException e) {
-			System.out.println(e);
-		}
 	}
 
 	public static List<Path> search(Path root, String ext) {
