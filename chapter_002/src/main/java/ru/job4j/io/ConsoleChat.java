@@ -39,43 +39,40 @@ public class ConsoleChat {
 		PrintWriter pw = new PrintWriter(path); //очистка лога
 		pw.close();
 
-		phrases = readPhrases(botAnswers);
-		System.out.println(HELLO);
-		writeDataInFile(path, HELLO);
-		try (BufferedReader in = new BufferedReader(new InputStreamReader(System.in, Charset.forName("UTF-8")))) {
-			String input = in.readLine();
-			writeDataInFile(path, input);
-			while (!input.equals(OUT)) {
-				if (input.equals(STOP)) {
-					active = false;
-				} else if (input.equals(CONTINUE)) {
-					active = true;
-					randomPhrase(path);
-				} else {
-					if (active) {
-						randomPhrase(path);
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, Charset.forName("UTF-8"), true))) {
+			phrases = readPhrases(botAnswers);
+			say(bw, HELLO);
+			try (BufferedReader in = new BufferedReader(new InputStreamReader(System.in, Charset.forName("UTF-8")))) {
+				String input = in.readLine();
+				bw.write(input + System.lineSeparator());
+				while (!input.equals(OUT)) {
+					if (input.equals(STOP)) {
+						active = false;
+					} else if (input.equals(CONTINUE)) {
+						active = true;
+						say(bw, randomPhrase());
+					} else {
+						if (active) {
+							say(bw, randomPhrase());
+						}
 					}
+					input = in.readLine();
+					bw.write(input + System.lineSeparator());
 				}
-				input = in.readLine();
-				writeDataInFile(path, input);
 			}
-		}
-		System.out.println(BYE);
-		writeDataInFile(path, BYE);
-	}
-
-	public void randomPhrase(String path) {
-		String out = phrases.get((int) Math.round((phrases.size() - 1) * Math.random()));
-		System.out.println(out);
-		writeDataInFile(path, out);
-	}
-
-	public void writeDataInFile(String path, String data) {
-		try (BufferedWriter br = new BufferedWriter(new FileWriter(path, Charset.forName("UTF-8"), true))) {
-			br.write(data + System.lineSeparator());
+			say(bw, BYE);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public String randomPhrase() {
+		return phrases.get((int) Math.round((phrases.size() - 1) * Math.random()));
+	}
+
+	public void say(BufferedWriter bw, String phrase) throws IOException {
+		System.out.println(phrase);
+		bw.write(phrase + System.lineSeparator());
 	}
 
 	public List<String> readPhrases(String path) {
