@@ -8,13 +8,13 @@ public class EchoServer {
 
 	public static void main(String[] args) throws IOException {
 		try (ServerSocket server = new ServerSocket(9000)) {
-			while (true) {
+			boolean exit = false;
+			while (!exit) {
 				Socket socket = server.accept();
 				try (OutputStream out = socket.getOutputStream();
 						BufferedReader in = new BufferedReader(
 								new InputStreamReader(socket.getInputStream()))) {
 					String str;
-					boolean exit = false;
 					String msg = "What";
 					while (!(str = in.readLine()).isEmpty()) {
 						if (str.contains("?msg=Exit")) {
@@ -27,9 +27,6 @@ public class EchoServer {
 					}
 					out.write("HTTP/1.1 200 OK\r\n\r\n".getBytes());
 					out.write(msg.getBytes());
-					if (exit) {
-						System.exit(0);
-					}
 				}
 			}
 		}
