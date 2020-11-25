@@ -1,4 +1,4 @@
-package ru.job4j.collection.simpleMap;
+package ru.job4j.collection.simplemap;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
@@ -24,7 +24,7 @@ public class SimpleHashMap<K, V> implements Iterable<V> {
 			modCount++;
 			count++;
 			rsl = true;
-			if ((float)count / capacity >= loadFactor) { // При конкурентном доступе, думаю, лучше расширять массив после добавленя элемента
+			if ((float) count / capacity >= loadFactor) { // При конкурентном доступе, думаю, лучше расширять массив после добавленя элемента
 				extend();
 			}
 		}
@@ -50,7 +50,7 @@ public class SimpleHashMap<K, V> implements Iterable<V> {
 		}
 		return rsl;
 	}
-	
+
 	public int capacity() {
 		return capacity;
 	}

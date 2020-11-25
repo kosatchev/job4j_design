@@ -41,7 +41,7 @@ public class TestUserListsJoiner {
 		List<User> lu = new LinkedList<>();
 		lu.add(ulj.new User("user1", "xxx@ya.ru", "foo@gmail.com", "lol@mail.ru", "xyz@pisem.net"));
 		lu.add(ulj.new User("user2", "foo@gmail.com", "ups@pisem.net"));
-		lu.add(ulj.new User("user3", "vasya@pupkin.com","xxx@ya.ru"));
+		lu.add(ulj.new User("user3", "vasya@pupkin.com", "xxx@ya.ru"));
 		lu.add(ulj.new User("user4", "aaa@bbb.ru", "lol@mail.ru"));
 		lu.add(ulj.new User("user5", "xyz@pisem.net"));
 

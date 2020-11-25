@@ -1,5 +1,6 @@
-package ru.job4j.collection.simpleMap;
+package ru.job4j.collection.simplemap;
 
+import ru.job4j.collection.simplemap.SimpleHashMap;
 import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
