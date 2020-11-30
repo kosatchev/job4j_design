@@ -1,0 +1,36 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+
+entity "Roles" as ro
+
+entity "Rules" as ru
+
+entity "Users" as us
+
+entity "Items" as it
+
+entity "Comments" as co
+
+entity "Attachs" as at
+
+entity "State" as st
+
+entity "Category" as ca
+
+
+
+us }|..|| ro
+ro }|..|{ ru
+it }|..|| us
+it ||..o{ co
+it ||..o{ at
+it }|..|| st
+it }|..|| ca
+
+@enduml

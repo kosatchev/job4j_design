@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="365px" preserveAspectRatio="none" style="width:402px;height:365px;" version="1.1" viewBox="0 0 402 365" width="402px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="fd7i1yewdmwwq" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <!--class us-->
+        <rect fill="#FEFECE" filter="url(#fd7i1yewdmwwq)" height="42.3441" style="stroke: #A80036; stroke-width: 1.5;" width="39" x="6" y="110"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="33" x="9" y="127.8281">Users</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="44" y1="136.3441" y2="136.3441"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="44" y1="144.3441" y2="144.3441"/>
+        <!--class ro-->
+        <rect fill="#FEFECE" filter="url(#fd7i1yewdmwwq)" height="42.3441" style="stroke: #A80036; stroke-width: 1.5;" width="36" x="7.5" y="212"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="30" x="10.5" y="229.8281">Roles</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="8.5" x2="42.5" y1="238.3441" y2="238.3441"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="8.5" x2="42.5" y1="246.3441" y2="246.3441"/>
+        <!--class ru-->
+        <rect fill="#FEFECE" filter="url(#fd7i1yewdmwwq)" height="42.3441" style="stroke: #A80036; stroke-width: 1.5;" width="36" x="7.5" y="314"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="30" x="10.5" y="331.8281">Rules</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="8.5" x2="42.5" y1="340.3441" y2="340.3441"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="8.5" x2="42.5" y1="348.3441" y2="348.3441"/>
+        <!--class it-->
+        <rect fill="#FEFECE" filter="url(#fd7i1yewdmwwq)" height="42.3441" style="stroke: #A80036; stroke-width: 1.5;" width="38" x="187.5" y="8"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="32" x="190.5" y="25.8281">Items</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="188.5" x2="224.5" y1="34.3441" y2="34.3441"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="188.5" x2="224.5" y1="42.3441" y2="42.3441"/>
+        <!--class co-->
+        <rect fill="#FEFECE" filter="url(#fd7i1yewdmwwq)" height="42.3441" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="80" y="110"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="61" x="83" y="127.8281">Comments</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="81" x2="146" y1="136.3441" y2="136.3441"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="81" x2="146" y1="144.3441" y2="144.3441"/>
+        <!--class at-->
+        <rect fill="#FEFECE" filter="url(#fd7i1yewdmwwq)" height="42.3441" style="stroke: #A80036; stroke-width: 1.5;" width="48" x="182.5" y="110"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="42" x="185.5" y="127.8281">Attachs</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="183.5" x2="229.5" y1="136.3441" y2="136.3441"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="183.5" x2="229.5" y1="144.3441" y2="144.3441"/>
+        <!--class st-->
+        <rect fill="#FEFECE" filter="url(#fd7i1yewdmwwq)" height="42.3441" style="stroke: #A80036; stroke-width: 1.5;" width="35" x="266" y="110"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="29" x="269" y="127.8281">State</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="267" x2="300" y1="136.3441" y2="136.3441"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="267" x2="300" y1="144.3441" y2="144.3441"/>
+        <!--class ca-->
+        <rect fill="#FEFECE" filter="url(#fd7i1yewdmwwq)" height="42.3441" style="stroke: #A80036; stroke-width: 1.5;" width="57" x="336" y="110"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="51" x="339" y="127.8281">Category</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="337" x2="392" y1="136.3441" y2="136.3441"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="337" x2="392" y1="144.3441" y2="144.3441"/>
+        <path d="M25.5,160.13 C25.5,160.13 25.5,203.89 25.5,203.89 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="29.5" x2="21.5" y1="207.89" y2="207.89"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="29.5" x2="21.5" y1="204.89" y2="204.89"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="25.5" y1="203.89" y2="211.89"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="19.5" y1="160.13" y2="152.13"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="31.5" y1="160.13" y2="152.13"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="25.5" y1="160.13" y2="152.13"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="21.5" x2="29.5" y1="162.13" y2="162.13"/>
+        <path d="M25.5,262.13 C25.5,262.13 25.5,305.89 25.5,305.89 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="31.5" y1="305.89" y2="313.89"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="19.5" y1="305.89" y2="313.89"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="25.5" y1="305.89" y2="313.89"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="29.5" x2="21.5" y1="303.89" y2="303.89"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="19.5" y1="262.13" y2="254.13"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="31.5" y1="262.13" y2="254.13"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="25.5" y1="262.13" y2="254.13"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="21.5" x2="29.5" y1="264.13" y2="264.13"/>
+        <path d="M179.47,22 C179.47,22 25.5,22 25.5,22 C25.5,22 25.5,101.98 25.5,101.98 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="29.5" x2="21.5" y1="105.98" y2="105.98"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="29.5" x2="21.5" y1="102.98" y2="102.98"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="25.5" y1="101.98" y2="109.98"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="179.47" x2="187.47" y1="22" y2="16"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="179.47" x2="187.47" y1="22" y2="28"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="179.47" x2="187.47" y1="22" y2="22"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="177.47" x2="177.47" y1="18" y2="26"/>
+        <path d="M179.23,36 C179.23,36 113.5,36 113.5,36 C113.5,36 113.5,101.92 113.5,101.92 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="113.5" x2="119.5" y1="101.92" y2="109.92"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="113.5" x2="107.5" y1="101.92" y2="109.92"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="113.5" x2="113.5" y1="101.92" y2="109.92"/>
+        <ellipse cx="113.5" cy="95.92" fill="none" rx="4" ry="4" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="183.23" x2="183.23" y1="32" y2="40"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="180.23" x2="180.23" y1="32" y2="40"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="179.23" x2="187.23" y1="36" y2="36"/>
+        <path d="M206.5,58.13 C206.5,58.13 206.5,101.89 206.5,101.89 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="206.5" x2="212.5" y1="101.89" y2="109.89"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="206.5" x2="200.5" y1="101.89" y2="109.89"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="206.5" x2="206.5" y1="101.89" y2="109.89"/>
+        <ellipse cx="206.5" cy="95.89" fill="none" rx="4" ry="4" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="202.5" x2="210.5" y1="54.13" y2="54.13"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="202.5" x2="210.5" y1="57.13" y2="57.13"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="206.5" x2="206.5" y1="58.13" y2="50.13"/>
+        <path d="M233.53,36 C233.53,36 283.5,36 283.5,36 C283.5,36 283.5,101.92 283.5,101.92 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="287.5" x2="279.5" y1="105.92" y2="105.92"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="287.5" x2="279.5" y1="102.92" y2="102.92"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="283.5" x2="283.5" y1="101.92" y2="109.92"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="233.53" x2="225.53" y1="36" y2="42"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="233.53" x2="225.53" y1="36" y2="30"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="233.53" x2="225.53" y1="36" y2="36"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="235.53" x2="235.53" y1="40" y2="32"/>
+        <path d="M233.56,22 C233.56,22 364.5,22 364.5,22 C364.5,22 364.5,101.98 364.5,101.98 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="368.5" x2="360.5" y1="105.98" y2="105.98"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="368.5" x2="360.5" y1="102.98" y2="102.98"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="364.5" x2="364.5" y1="101.98" y2="109.98"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="233.56" x2="225.56" y1="22" y2="28"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="233.56" x2="225.56" y1="22" y2="16"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="233.56" x2="225.56" y1="22" y2="22"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="235.56" x2="235.56" y1="26" y2="18"/>
+        <!--
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "Users" as us
+
+entity "Roles" as ro
+
+entity "Rules" as ru
+
+entity "Items" as it
+
+entity "Comments" as co
+
+entity "Attachs" as at
+
+entity "State" as st
+
+entity "Category" as ca
+
+
+
+us }|..|| ro
+ro }|..|{ ru
+it }|..|| us
+it ||..o{ co
+it ||..o{ at
+it }|..|| st
+it }|..|| ca
+
+@enduml
+
+PlantUML version 2017.11(Wed Apr 19 21:18:59 YEKT 2017)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10
+Operating System: Linux
+OS Version: 5.4.0-53-generic
+Default Encoding: UTF-8
+Language: ru
+Country: RU
+-->
+    </g>
+</svg>
