@@ -51,7 +51,7 @@ where t."name" = 'Сыр';
 -- 2. Написать запрос получения всех продуктов, у кого в имени есть слово "мороженное"
 select * from products where "name" like '%мороженное%';
 -- 3. Написать запрос, который выводит все продукты, срок годности которых заканчивается в следующем месяце.
-select * from products where expired_date < now()+ interval '1 month';
+select * from products where extract(month from expired_date) = extract(month from now()+ interval '1 month');
 -- 4. Написать запрос, который выводит самый дорогой продукт.
 select * from products order by price desc limit 1;
 -- 5. Написать запрос, который выводит количество всех продуктов определенного типа.
@@ -70,3 +70,8 @@ group by t.name;
 -- 8. Вывести все продукты и их тип.
 select p.name, t.name "type" from products p
 join "types" as t on type_id = t.id;
+-- 9. Написать запрос, который выводит типы продуктов, содержащие менее 5 наименований.
+select t.name from products
+join "types" as t on type_id = t.id
+group by t.name
+having count(t."name") < 5;
