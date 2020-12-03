@@ -56,3 +56,15 @@ full join body b on c.body_id = b.id
 full join engine e on c.engine_id = e.id
 full join transmission t on c.transmission_id = t.id
 where c.body_id is null and c.engine_id is null and c.transmission_id is null;
+
+select b.name body from car c
+full join body b on c.body_id = b.id
+where c.body_id is null;
+
+select b.name engine from car c
+full join engine b on c.engine_id = b.id
+where c.engine_id is null;
+
+select b.name transmission from car c
+full join transmission b on c.transmission_id = b.id
+where c.transmission_id is null;
