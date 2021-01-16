@@ -23,8 +23,9 @@ public class ImportDB {
 		List<User> users = new ArrayList<>();
 		try (BufferedReader rd = new BufferedReader(new FileReader(dump))) {
 			rd.lines().forEach(e -> {
-				var s=e.split(";");
-				users.add(new User(s[0],s[1]));});
+				var s = e.split(";");
+				users.add(new User(s[0], s[1]));
+			});
 		}
 		return users;
 	}
