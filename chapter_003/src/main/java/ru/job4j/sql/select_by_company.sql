@@ -36,3 +36,10 @@ where s.count = (
 	order by count desc limit 1
 )
 group by s.name, s.count;
+
+-- 2. Необходимо выбрать название компании с максимальным количеством человек + количество человек в этой компании. - Одной строкой
+select c."name", count(p.company_id)
+from company c
+join person p on p.company_id = c.id
+group by c."name",p.company_id
+order by count desc limit 1
