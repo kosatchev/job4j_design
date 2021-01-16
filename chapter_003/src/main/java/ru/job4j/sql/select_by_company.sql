@@ -19,7 +19,7 @@ CREATE TABLE person
 select p."name", c."name" 
 from person p
 join company c on c.id = p.company_id
-where company_id = 5;
+where company_id != 5;
 
 -- 2. Необходимо выбрать название компании с максимальным количеством человек + количество человек в этой компании.
 select s."name", count from(
